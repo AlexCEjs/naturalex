@@ -6,66 +6,67 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 30 10% 15%;
+    --background: 160 30% 97%;
+    --foreground: 160 15% 12%;
 
-    --card: 40 15% 95%;
-    --card-foreground: 30 10% 15%;
+    --card: 160 25% 95%;
+    --card-foreground: 160 15% 12%;
 
-    --popover: 40 20% 97%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 160 30% 97%;
+    --popover-foreground: 160 15% 12%;
 
-    --primary: 140 25% 35%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 168 45% 42%;
+    --primary-foreground: 160 30% 97%;
 
-    --secondary: 35 30% 90%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 160 25% 90%;
+    --secondary-foreground: 160 20% 20%;
 
-    --muted: 40 15% 92%;
-    --muted-foreground: 30 8% 45%;
+    --muted: 160 20% 92%;
+    --muted-foreground: 160 10% 40%;
 
-    --accent: 25 45% 55%;
-    --accent-foreground: 40 20% 97%;
+    --accent: 172 55% 35%;
+    --accent-foreground: 160 30% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 140 25% 35%;
+    --border: 160 20% 85%;
+    --input: 160 20% 85%;
+    --ring: 168 45% 42%;
 
     --radius: 0.25rem;
 
-    /* Custom tokens */
-    --sage: 140 25% 35%;
-    --sage-light: 140 20% 90%;
-    --cream: 40 20% 97%;
-    --cream-dark: 35 15% 92%;
-    --charcoal: 30 10% 15%;
-    --terracotta: 25 45% 55%;
+    /* Custom tokens - Mint Green Palette */
+    --mint: 168 45% 42%;
+    --mint-light: 160 35% 90%;
+    --mint-dark: 172 55% 35%;
+    --mint-pale: 160 30% 97%;
+    --mint-muted: 160 25% 75%;
+    --charcoal: 160 15% 12%;
+    --teal: 175 50% 30%;
 
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Inter', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 30 10% 10%;
-    --foreground: 40 20% 95%;
-    --card: 30 10% 12%;
-    --card-foreground: 40 20% 95%;
-    --popover: 30 10% 10%;
-    --popover-foreground: 40 20% 95%;
-    --primary: 140 30% 50%;
-    --primary-foreground: 30 10% 10%;
-    --secondary: 30 15% 20%;
-    --secondary-foreground: 40 20% 90%;
-    --muted: 30 10% 18%;
-    --muted-foreground: 40 15% 65%;
-    --accent: 25 50% 60%;
-    --accent-foreground: 30 10% 10%;
-    --border: 30 10% 22%;
-    --input: 30 10% 22%;
-    --ring: 140 30% 50%;
+    --background: 160 20% 8%;
+    --foreground: 160 25% 95%;
+    --card: 160 18% 12%;
+    --card-foreground: 160 25% 95%;
+    --popover: 160 20% 8%;
+    --popover-foreground: 160 25% 95%;
+    --primary: 168 50% 55%;
+    --primary-foreground: 160 20% 8%;
+    --secondary: 160 20% 18%;
+    --secondary-foreground: 160 25% 90%;
+    --muted: 160 15% 16%;
+    --muted-foreground: 160 20% 65%;
+    --accent: 172 60% 50%;
+    --accent-foreground: 160 20% 8%;
+    --border: 160 15% 22%;
+    --input: 160 15% 22%;
+    --ring: 168 50% 55%;
   }
 }
 

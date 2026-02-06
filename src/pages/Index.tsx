@@ -10,7 +10,7 @@ const Index = () => {
         <div className="max-w-5xl mx-auto px-6 py-8">
           <nav className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <h1 className="font-serif text-2xl tracking-wide text-foreground">
-              Natura<span className="text-primary">.</span>
+              Nutri<span className="text-primary">GR</span>
             </h1>
             <div className="flex gap-8">
               <button
@@ -40,10 +40,10 @@ const Index = () => {
         <div className="max-w-5xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <p className="font-serif text-xl text-foreground">
-              Natura<span className="text-primary">.</span>
+              Nutri<span className="text-primary">GR</span>
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2024 Natura. Productos naturales para una vida consciente.
+              © 2024 NutriGR. Productos naturales para una vida consciente.
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const AboutSection = () => (
       {/* Right Column - Content */}
       <div className="prose-natural">
         <p>
-          En <strong className="text-foreground font-medium">Natura</strong>, creemos que la belleza verdadera 
+          En <strong className="text-foreground font-medium">NutriGR</strong>, creemos que la belleza verdadera 
           proviene de la armonía con la naturaleza. Desde 2015, nos hemos dedicado a 
           crear productos que respetan tanto tu piel como el planeta.
         </p>
@@ -141,7 +141,7 @@ const PrivacySection = () => (
       {/* Right Column - Content */}
       <div className="prose-natural">
         <p>
-          En <strong className="text-foreground font-medium">Natura</strong>, valoramos y respetamos 
+          En <strong className="text-foreground font-medium">NutriGR</strong>, valoramos y respetamos 
           tu privacidad. Esta política describe cómo recopilamos, usamos y 
           protegemos tu información personal.
         </p>
