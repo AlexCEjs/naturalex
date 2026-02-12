@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalex - Productos Naturales para una Vida Consciente</title>
+    <meta name="description"
+        content="Tienda virtual especializada en productos naturales de alta calidad. Descubre soluciones naturales para tu bienestar físico y emocional.">
+    <meta name="author" content="Naturalex">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Naturalex - Productos Naturales">
+    <meta property="og:description"
+        content="Tienda virtual especializada en productos naturales para mejorar tu bienestar y calidad de vida">
+    <meta property="og:image"
+        content="https://storage.googleapis.com/gpt-engineer-file-uploads/y8gwQgmr0nOJVUBYrpiRXS8AOPd2/social-images/social-1770346536872-Logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="antialiased bg-natural-cream text-natural-charcoal overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-sage-200/50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <!-- Logo -->
+                <a href="#"
+                    class="font-serif text-3xl tracking-wide text-mint-700 hover:text-mint-600 transition-colors">
+                    Naturalex
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="flex flex-wrap gap-8">
+                    <button data-section="welcome" class="nav-link nav-link-active group">
+                        <span class="relative">
+                            Bienvenida
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-mint-500 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </button>
+                    <button data-section="terms" class="nav-link group">
+                        <span class="relative">
+                            Términos y Condiciones
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-mint-500 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </button>
+                    <button data-section="privacy" class="nav-link group">
+                        <span class="relative">
+                            Privacidad
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-mint-500 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 min-h-screen">
+
+        <!-- WELCOME SECTION -->
+        <section id="welcome-section" class="section-content">
+
+            <!-- Hero Carousel -->
+            <div class="relative w-full h-[70vh] md:h-[80vh] overflow-hidden mb-16 md:mb-24">
+                <div class="carousel-container relative w-full h-full">
+                    <!-- Carousel Images -->
+                    <div class="carousel-slide active absolute inset-0">
+                        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?w=1920&h=1080&fit=crop"
+                            alt="Naturaleza serena" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-natural-charcoal/70 via-natural-charcoal/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="carousel-slide absolute inset-0">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&h=1080&fit=crop"
+                            alt="Hojas naturales" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-mint-900/70 via-mint-800/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="carousel-slide absolute inset-0">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1920&h=1080&fit=crop"
+                            alt="Productos naturales" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-sage-900/70 via-sage-800/30 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Carousel Content Overlay -->
+                    <div class="absolute inset-0 flex flex-col justify-end pb-12 md:pb-20 px-6 z-10">
+                        <div class="max-w-7xl mx-auto w-full">
+                            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 animate-fade-in">
+                                Productos<br>Naturales
+                            </h1>
+                            <p class="text-xl md:text-2xl text-white/90 max-w-2xl animate-slide-up">
+                                Descubre el poder de la naturaleza para tu bienestar
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-btn carousel-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20"
+                        aria-label="Anterior">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20"
+                        aria-label="Siguiente">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- Carousel Indicators -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                        <button class="carousel-indicator active" data-slide="0"></button>
+                        <button class="carousel-indicator" data-slide="1"></button>
+                        <button class="carousel-indicator" data-slide="2"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Content -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+                <div class="grid md:grid-cols-12 gap-12 lg:gap-16">
+
+                    <!-- Left Column: Title & Accent -->
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <div class="sticky top-32">
+                            <span class="inline-block text-sm uppercase tracking-widest text-mint-600 font-medium mb-4">
+                                Bienvenidos
+                            </span>
+                            <h2 class="font-serif text-5xl lg:text-6xl text-natural-charcoal mb-8 leading-tight">
+                                Tienda<br>Digital
+                            </h2>
+                            <div class="w-20 h-1 bg-gradient-to-r from-mint-500 to-mint-300 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="md:col-span-8 lg:col-span-9 prose-natural">
+                        <p class="text-lg md:text-xl text-sage-700 leading-relaxed mb-6">
+                            En <strong class="text-mint-700 font-semibold">Naturalex</strong>,
+                            somos una tienda virtual especializada en productos naturales diseñados para
+                            mejorar tu bienestar y calidad de vida. Ofrecemos soluciones que apoyan tu
+                            salud de manera integral, combinando lo mejor de la naturaleza con estándares
+                            modernos de calidad y confianza.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Nuestra Misión</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            Nuestra misión es brindar productos naturales de alta calidad que contribuyan
+                            al bienestar físico y emocional de las personas. Creemos en el poder de la
+                            naturaleza para cuidar el cuerpo de forma equilibrada, y trabajamos para
+                            ofrecer alternativas accesibles, confiables y efectivas para tu día a día.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Nuestros Productos</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            En Naturalex encontrarás una selección de productos naturales cuidadosamente
+                            elegidos para apoyar diferentes necesidades de salud y bienestar. Cada
+                            producto cumple con estrictos estándares de calidad, garantizando seguridad,
+                            pureza y efectividad en cada uso.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Compromiso con la Calidad</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            Nos comprometemos a ofrecer únicamente productos que cumplan altos estándares
+                            de calidad, seleccionados de forma responsable y confiable. Nuestro objetivo
+                            es brindarte soluciones naturales que realmente aporten beneficios y
+                            confianza en cada compra.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Explora y Disfruta</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed">
+                            Te invitamos a explorar nuestra tienda virtual y descubrir cómo Naturalex
+                            puede acompañarte en tu camino hacia una vida más saludable y equilibrada.
+                            ¡Gracias por confiar en nosotros!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMS SECTION -->
+        <section id="terms-section" class="section-content hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+                <div class="grid md:grid-cols-12 gap-12 lg:gap-16">
+
+                    <!-- Left Column: Title & Accent -->
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <div class="sticky top-32">
+                            <span class="inline-block text-sm uppercase tracking-widest text-mint-600 font-medium mb-4">
+                                Información Legal
+                            </span>
+                            <h2 class="font-serif text-5xl lg:text-6xl text-natural-charcoal mb-8 leading-tight">
+                                Términos y<br>Condiciones
+                            </h2>
+                            <div class="w-20 h-1 bg-gradient-to-r from-mint-500 to-mint-300 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="md:col-span-8 lg:col-span-9 prose-natural">
+                        <p class="text-lg md:text-xl text-sage-700 leading-relaxed mb-6">
+                            Al acceder y utilizar los servicios de
+                            <strong class="text-mint-700 font-semibold">Naturalex</strong>,
+                            aceptas cumplir con los presentes Términos y Condiciones.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Uso del Sitio</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            El contenido de este sitio es únicamente para fines informativos.
+                            Nuestros productos no sustituyen una alimentación equilibrada ni
+                            tratamientos médicos.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Responsabilidad</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            Naturalex no se hace responsable por el uso indebido de los productos.
+                            Es responsabilidad del usuario seguir las indicaciones y advertencias
+                            descritas en cada etiqueta.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Propiedad Intelectual</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            Todo el contenido, imágenes, textos y logotipos son propiedad de
+                            Naturalex y no pueden ser utilizados sin autorización previa.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Modificaciones</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-6">
+                            Nos reservamos el derecho de modificar estos términos en cualquier
+                            momento. Los cambios entrarán en vigor una vez publicados en este
+                            sitio.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Contacto</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed mb-4">
+                            Para cualquier consulta relacionada con estos términos, puedes comunicarte con nosotros a
+                            través de los siguientes medios:
+                        </p>
+                        <div class="bg-sage-50 rounded-2xl p-8 border border-sage-200">
+                            <ul class="space-y-3 text-sage-700">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-mint-600 mt-1">📍</span>
+                                    <div>
+                                        <strong class="text-natural-charcoal">Dirección:</strong> Cdla. San Rafael, Via
+                                        La Huada
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-mint-600 mt-1">🏙️</span>
+                                    <div>
+                                        <strong class="text-natural-charcoal">Ciudad:</strong> Huaquillas
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-mint-600 mt-1">🌎</span>
+                                    <div>
+                                        <strong class="text-natural-charcoal">País:</strong> Ecuador
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-mint-600 mt-1">📱</span>
+                                    <div>
+                                        <strong class="text-natural-charcoal">Teléfono / WhatsApp:</strong>
+                                        +593995282933
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-mint-600 mt-1">✉️</span>
+                                    <div>
+                                        <strong class="text-natural-charcoal">Correo electrónico:</strong>
+                                        <a href="mailto:naturalex@skace.site"
+                                            class="text-mint-600 hover:text-mint-700 underline underline-offset-4 ml-2">
+                                            naturalex@skace.site
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY SECTION -->
+        <section id="privacy-section" class="section-content hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+                <div class="grid md:grid-cols-12 gap-12 lg:gap-16">
+
+                    <!-- Left Column: Title & Accent -->
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <div class="sticky top-32">
+                            <span class="inline-block text-sm uppercase tracking-widest text-mint-600 font-medium mb-4">
+                                Tu Privacidad
+                            </span>
+                            <h2 class="font-serif text-5xl lg:text-6xl text-natural-charcoal mb-8 leading-tight">
+                                Políticas de<br>Privacidad
+                            </h2>
+                            <div class="w-20 h-1 bg-gradient-to-r from-mint-500 to-mint-300 rounded-full"></div>
+                            <p class="text-sm text-sage-600 mt-8">
+                                Última actualización:<br>
+                                <span class="font-medium text-natural-charcoal">Enero 2026</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="md:col-span-8 lg:col-span-9 prose-natural">
+                        <p class="text-lg md:text-xl text-sage-700 leading-relaxed mb-6">
+                            En <strong class="text-mint-700 font-semibold">Naturalex</strong>, valoramos y respetamos
+                            tu privacidad. Esta política describe cómo recopilamos, usamos y
+                            protegemos tu información personal.
+                        </p>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Información que Recopilamos
+                        </h3>
+                        <ul class="space-y-3 text-lg text-sage-700 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Creas una cuenta en nuestra plataforma</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Realizas una compra o solicitas información</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Te suscribes a nuestro boletín informativo</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Te comunicas con nuestro equipo de atención al cliente</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Uso de la Información</h3>
+                        <ul class="space-y-3 text-lg text-sage-700 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Procesar y enviar tus pedidos</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Comunicarnos contigo sobre tu cuenta</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Enviarte promociones (con tu consentimiento)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-mint-500 mt-1.5">•</span>
+                                <span>Mejorar nuestros servicios</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="font-serif text-3xl text-natural-charcoal mt-12 mb-4">Protección de Datos</h3>
+                        <p class="text-lg text-sage-700 leading-relaxed">
+                            Implementamos medidas de seguridad técnicas y organizativas para
+                            proteger tu información personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-sage-200/50 bg-gradient-to-b from-white to-sage-50/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <p class="font-serif text-2xl text-mint-700">Naturalex</p>
+                <p class="text-sage-600 text-sm">
+                    © 2026 Naturalex. Productos naturales para una vida consciente.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

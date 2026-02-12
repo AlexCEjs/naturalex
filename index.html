@@ -1,34 +1,680 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Generated Project">
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/y8gwQgmr0nOJVUBYrpiRXS8AOPd2/social-images/social-1770346536872-Logo.png">
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/y8gwQgmr0nOJVUBYrpiRXS8AOPd2/social-images/social-1770346536872-Logo.png">
-    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naturalex - Productos Naturales</title>
+  <meta name="description" content="Tienda virtual especializada en productos naturales para mejorar tu bienestar y calidad de vida">
+  <meta name="author" content="Naturalex">
   
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Naturalex - Productos Naturales">
+  <meta property="og:description" content="Tienda virtual especializada en productos naturales para mejorar tu bienestar y calidad de vida">
+  <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/y8gwQgmr0nOJVUBYrpiRXS8AOPd2/social-images/social-1770346536872-Logo.png">
   
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   
-  <meta property="og:title" content="Lovable App">
-  <meta name="twitter:title" content="Lovable App">
-  <meta property="og:description" content="Generated Project">
-  <meta name="twitter:description" content="Generated Project">
+  <style>
+    /* ============================================
+       CSS VARIABLES - MINT GREEN PALETTE
+       ============================================ */
+    :root {
+      /* Color Palette */
+      --bg-primary: hsl(160, 30%, 97%);
+      --text-primary: hsl(160, 15%, 12%);
+      --text-muted: hsl(160, 10%, 40%);
+      
+      --mint: hsl(168, 45%, 42%);
+      --mint-light: hsl(160, 35%, 90%);
+      --mint-dark: hsl(172, 55%, 35%);
+      --mint-pale: hsl(160, 30%, 97%);
+      --mint-muted: hsl(160, 25%, 75%);
+      
+      --border-color: hsl(160, 20%, 85%);
+      --charcoal: hsl(160, 15%, 12%);
+      
+      /* Fonts */
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      
+      /* Spacing */
+      --container-max: 80rem;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 4rem;
+    }
+    
+    /* ============================================
+       BASE STYLES
+       ============================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    
+    /* ============================================
+       HEADER & NAVIGATION
+       ============================================ */
+    header {
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .nav-link {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      font-family: var(--font-sans);
+    }
+    
+    .nav-link:hover {
+      color: var(--mint);
+    }
+    
+    .nav-link.active {
+      color: var(--mint);
+      border-bottom-color: var(--mint);
+    }
+    
+    /* ============================================
+       MAIN CONTENT
+       ============================================ */
+    main {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      flex: 1;
+    }
+    
+    section {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .section-hidden {
+      display: none;
+    }
+    
+    /* ============================================
+       CAROUSEL
+       ============================================ */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 16rem;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .carousel-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .carousel-image.active {
+      opacity: 1;
+    }
+    
+    /* ============================================
+       CONTENT GRID
+       ============================================ */
+    .content-grid {
+      display: grid;
+      gap: 3rem;
+    }
+    
+    .section-header {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .section-label {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--mint);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    
+    .divider {
+      width: 4rem;
+      height: 1px;
+      background: var(--mint);
+      opacity: 0.4;
+      margin: 2rem 0;
+    }
+    
+    .prose {
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    
+    .prose p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+    
+    .prose h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .prose strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    
+    .prose ul {
+      list-style: disc;
+      list-style-position: inside;
+      margin-left: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .prose ul li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .prose a {
+      color: var(--mint);
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+      transition: color 0.3s ease;
+    }
+    
+    .prose a:hover {
+      color: var(--mint-dark);
+    }
+    
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+      border-top: 1px solid var(--border-color);
+      margin-top: auto;
+    }
+    
+    .footer-container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+    
+    .footer-text {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    
+    /* ============================================
+       RESPONSIVE DESIGN
+       ============================================ */
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .carousel {
+        height: 20rem;
+      }
+      
+      .content-grid {
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+      }
+      
+      .section-title {
+        font-size: 3rem;
+      }
+      
+      .prose p {
+        font-size: 1.125rem;
+      }
+      
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      main {
+        padding: 6rem 1.5rem;
+      }
+    }
+    
+    /* ============================================
+       ANIMATIONS & EFFECTS
+       ============================================ */
+    .nav-link,
+    .prose a,
+    .carousel-image {
+      transition: all 0.3s ease;
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <nav>
+        <h1 class="logo">Naturalex</h1>
+        <div class="nav-links">
+          <button class="nav-link active" onclick="showSection('welcome')">Bienvenida</button>
+          <button class="nav-link" onclick="showSection('terms')">Términos y Condiciones</button>
+          <button class="nav-link" onclick="showSection('privacy')">Privacidad</button>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- WELCOME SECTION -->
+    <section id="welcome-section">
+      <!-- Carousel -->
+      <div class="carousel">
+        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" alt="Naturaleza 1" class="carousel-image active">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef" alt="Naturaleza 2" class="carousel-image">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Naturaleza 3" class="carousel-image">
+      </div>
+      
+      <div class="content-grid">
+        <div class="section-header">
+          <span class="section-label">Bienvenidos</span>
+          <h2 class="section-title">Tienda<br>Digital</h2>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="prose">
+          <p>
+            En <strong>Naturalex</strong>,
+            somos una tienda virtual especializada en productos naturales diseñados para 
+            mejorar tu bienestar y calidad de vida. Ofrecemos soluciones que apoyan tu 
+            salud de manera integral, combinando lo mejor de la naturaleza con estándares 
+            modernos de calidad y confianza.
+          </p>
+
+          <h3>Nuestra Misión</h3>
+
+          <p>
+            Nuestra misión es brindar productos naturales de alta calidad que contribuyan 
+            al bienestar físico y emocional de las personas. Creemos en el poder de la 
+            naturaleza para cuidar el cuerpo de forma equilibrada, y trabajamos para 
+            ofrecer alternativas accesibles, confiables y efectivas para tu día a día.
+          </p>
+
+          <h3>Nuestros Productos</h3>
+
+          <p>
+            En Naturalex encontrarás una selección de productos naturales cuidadosamente 
+            elegidos para apoyar diferentes necesidades de salud y bienestar. Cada 
+            producto cumple con estrictos estándares de calidad, garantizando seguridad, 
+            pureza y efectividad en cada uso.
+          </p>
+
+          <h3>Compromiso con la Calidad</h3>
+
+          <p>
+            Nos comprometemos a ofrecer únicamente productos que cumplan altos estándares 
+            de calidad, seleccionados de forma responsable y confiable. Nuestro objetivo 
+            es brindarte soluciones naturales que realmente aporten beneficios y 
+            confianza en cada compra.
+          </p>
+
+          <h3>Explora y Disfruta</h3>
+
+          <p>
+            Te invitamos a explorar nuestra tienda virtual y descubrir cómo Naturalex 
+            puede acompañarte en tu camino hacia una vida más saludable y equilibrada. 
+            ¡Gracias por confiar en nosotros!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMS SECTION -->
+    <section id="terms-section" class="section-hidden">
+      <!-- Carousel -->
+      <div class="carousel">
+        <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" alt="Naturaleza 1" class="carousel-image active">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef" alt="Naturaleza 2" class="carousel-image">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="Naturaleza 3" class="carousel-image">
+      </div>
+      
+      <div class="content-grid">
+        <div class="section-header">
+          <span class="section-label">Información Legal</span>
+          <h2 class="section-title">Términos y<br>Condiciones</h2>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="prose">
+          <p>
+            Al acceder y utilizar los servicios de 
+            <strong>Naturalex</strong>,
+            aceptas cumplir con los presentes Términos y Condiciones.
+          </p>
+
+          <h3>Uso del Sitio</h3>
+
+          <p>
+            El contenido de este sitio es únicamente para fines informativos.
+            Nuestros productos no sustituyen una alimentación equilibrada ni
+            tratamientos médicos.
+          </p>
+
+          <h3>Responsabilidad</h3>
+
+          <p>
+            Naturalex no se hace responsable por el uso indebido de los productos.
+            Es responsabilidad del usuario seguir las indicaciones y advertencias
+            descritas en cada etiqueta.
+          </p>
+
+          <h3>Propiedad Intelectual</h3>
+
+          <p>
+            Todo el contenido, imágenes, textos y logotipos son propiedad de
+            Naturalex y no pueden ser utilizados sin autorización previa.
+          </p>
+
+          <h3>Modificaciones</h3>
+
+          <p>
+            Nos reservamos el derecho de modificar estos términos en cualquier
+            momento. Los cambios entrarán en vigor una vez publicados en este
+            sitio.
+          </p>
+
+          <h3>Contacto</h3>
+          <p>
+            Para cualquier consulta relacionada con estos términos, puedes comunicarte con nosotros a través de los siguientes medios:
+          </p>
+          <ul>
+            <li><strong>Dirección:</strong> Cdla. San Rafael, Via La Huada</li>
+            <li><strong>Ciudad:</strong> Huaquillas</li>
+            <li><strong>País:</strong> Ecuador</li>
+            <li><strong>Teléfono / WhatsApp:</strong> +593995282933</li>
+            <li>
+              <strong>Correo electrónico:</strong> 
+              <a href="mailto:naturalex@skace.site">naturalex@skace.site</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY SECTION -->
+    <section id="privacy-section" class="section-hidden">
+      <div class="content-grid">
+        <div class="section-header">
+          <span class="section-label">Tu Privacidad</span>
+          <h2 class="section-title">Políticas de<br>Privacidad</h2>
+          <div class="divider"></div>
+          <p class="footer-text" style="margin-top: 1.5rem;">
+            Última actualización:<br>
+            Enero 2026
+          </p>
+        </div>
+        
+        <div class="prose">
+          <p>
+            En <strong>Naturalex</strong>, valoramos y respetamos 
+            tu privacidad. Esta política describe cómo recopilamos, usamos y 
+            protegemos tu información personal.
+          </p>
+
+          <h3>Información que Recopilamos</h3>
+
+          <ul>
+            <li>Creas una cuenta en nuestra plataforma</li>
+            <li>Realizas una compra o solicitas información</li>
+            <li>Te suscribes a nuestro boletín informativo</li>
+            <li>Te comunicas con nuestro equipo de atención al cliente</li>
+          </ul>
+
+          <h3>Uso de la Información</h3>
+
+          <ul>
+            <li>Procesar y enviar tus pedidos</li>
+            <li>Comunicarnos contigo sobre tu cuenta</li>
+            <li>Enviarte promociones (con tu consentimiento)</li>
+            <li>Mejorar nuestros servicios</li>
+          </ul>
+
+          <h3>Protección de Datos</h3>
+
+          <p>
+            Implementamos medidas de seguridad técnicas y organizativas para
+            proteger tu información personal.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p class="footer-logo">Naturalex</p>
+        <p class="footer-text">
+          © 2026 Naturalex. Productos naturales para una vida consciente.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // ============================================
+    // SECTION NAVIGATION
+    // ============================================
+    let activeSection = 'welcome';
+    
+    function showSection(sectionName) {
+      // Hide all sections
+      const sections = ['welcome', 'terms', 'privacy'];
+      sections.forEach(name => {
+        const section = document.getElementById(name + '-section');
+        if (section) {
+          if (name === sectionName) {
+            section.classList.remove('section-hidden');
+            // Re-trigger animation
+            section.style.animation = 'none';
+            setTimeout(() => {
+              section.style.animation = '';
+            }, 10);
+          } else {
+            section.classList.add('section-hidden');
+          }
+        }
+      });
+      
+      // Update navigation links
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach((link, index) => {
+        if (sections[index] === sectionName) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      
+      activeSection = sectionName;
+      
+      // Scroll to top smoothly
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Reset carousel for the new section
+      if (sectionName === 'welcome' || sectionName === 'terms') {
+        resetCarousel(sectionName);
+      }
+    }
+    
+    // ============================================
+    // IMAGE CAROUSEL
+    // ============================================
+    let carouselIntervals = {};
+    
+    function initCarousel(sectionName) {
+      const section = document.getElementById(sectionName + '-section');
+      if (!section) return;
+      
+      const carousel = section.querySelector('.carousel');
+      if (!carousel) return;
+      
+      const images = carousel.querySelectorAll('.carousel-image');
+      if (images.length === 0) return;
+      
+      let currentIndex = 0;
+      
+      // Clear any existing interval for this section
+      if (carouselIntervals[sectionName]) {
+        clearInterval(carouselIntervals[sectionName]);
+      }
+      
+      // Set up new interval
+      carouselIntervals[sectionName] = setInterval(() => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+      }, 4000);
+    }
+    
+    function resetCarousel(sectionName) {
+      const section = document.getElementById(sectionName + '-section');
+      if (!section) return;
+      
+      const carousel = section.querySelector('.carousel');
+      if (!carousel) return;
+      
+      const images = carousel.querySelectorAll('.carousel-image');
+      images.forEach((img, index) => {
+        img.classList.remove('active');
+        if (index === 0) {
+          img.classList.add('active');
+        }
+      });
+      
+      initCarousel(sectionName);
+    }
+    
+    // ============================================
+    // INITIALIZATION
+    // ============================================
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize carousels for sections with carousels
+      initCarousel('welcome');
+      initCarousel('terms');
+    });
+  </script>
+</body>
 </html>
