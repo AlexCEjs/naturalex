@@ -222,17 +222,23 @@ const TermsSection = () => (
         </p>
 
         <h3>Contacto</h3>
-
         <p>
-          Para cualquier consulta relacionada con estos términos, puedes
-          escribirnos a{" "}
-          <a
-            href="mailto:legal@nutrigr.com"
-            className="text-primary underline underline-offset-4"
-          >
-            legal@nutrigr.com
-          </a>
+          Para cualquier consulta relacionada con estos términos, puedes comunicarte con nosotros a través de los siguientes medios:
         </p>
+        <ul className="space-y-1">
+          <li><strong>Dirección:</strong> Cdla. San Rafael, Via La Huada</li>
+          <li><strong>Ciudad:</strong> Huaquillas</li>
+          <li><strong>País:</strong> Ecuador</li>
+          <li><strong>Teléfono / WhatsApp:</strong> +593995282933</li>
+          <li>
+            <strong>Correo electrónico:</strong>{" "}
+            <a
+              href="mailto:naturalex@skace.site"
+              className="text-primary underline underline-offset-4">
+              naturalex@skace.site
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
